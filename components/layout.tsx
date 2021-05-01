@@ -4,7 +4,7 @@ import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
-const name = 'Yori'
+const name = 'Makoto Katayori'
 export const siteTitle = 'Yori Portfolio'
 
 type Props = {

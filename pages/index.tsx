@@ -30,10 +30,9 @@ export default function Home({ allPostsData }: Props) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>こんにちは！かたよりです。趣味は植物を育てることです。</p>
         <p>
-          (This is a sample website - you’ll be building a site like this on{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
+          こんにちは！かたよりです。趣味は植物を育てることです。
+          <a href="https://github.com/yoritin">GitHub</a>
         </p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
