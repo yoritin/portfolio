@@ -4,6 +4,7 @@ import matter from 'gray-matter'
 import remark from 'remark'
 import html from 'remark-html'
 import fetch from 'node-fetch'
+import { decode } from 'js-base64'
 
 const postsDirectory = path.join(process.cwd(), 'posts')
 
@@ -66,7 +67,7 @@ export async function getAllPostIds() {
   const repoUrl =
     'https://api.github.com/repos/yoritin/nextjs-blog/contents/posts'
   const response = await fetch(repoUrl)
-  const files = response.json()
+  const files = await response.json()
   const fileNames = files.map((file) => file.name)
 
   return fileNames.map((fileName) => {
@@ -78,9 +79,32 @@ export async function getAllPostIds() {
   })
 }
 
+// export async function getPostData(id) {
+//   const fullPath = path.join(postsDirectory, `${id}.md`)
+//   const fileContents = fs.readFileSync(fullPath, 'utf8')
+
+//   // Use gray-matter to parse the post metadata section
+//   const matterResult = matter(fileContents)
+
+//   // Use remark to convert markdown into HTML string
+//   const processedContent = await remark()
+//     .use(html)
+//     .process(matterResult.content)
+//   const contentHtml = processedContent.toString()
+
+//   // Combine the data with the id and contentHtml
+//   return {
+//     id,
+//     contentHtml,
+//     ...(matterResult.data as { date: string; title: string }),
+//   }
+// }
+
 export async function getPostData(id) {
-  const fullPath = path.join(postsDirectory, `${id}.md`)
-  const fileContents = fs.readFileSync(fullPath, 'utf8')
+  const repoUrl = `https://api.github.com/repos/yoritin/nextjs-blog/contents/posts/${id}.md`
+  const response = await fetch(repoUrl)
+  const file = await response.json()
+  const fileContents = decode(file.content)
 
   // Use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents)
