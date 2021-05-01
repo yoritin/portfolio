@@ -31,7 +31,7 @@ export default function Post({ postData }: Props) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = getAllPostIds()
+  const paths = await getAllPostIds()
   return {
     paths,
     fallback: false,
