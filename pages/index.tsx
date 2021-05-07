@@ -4,13 +4,16 @@ import Date from '../components/date'
 import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
+import { getProfile } from '../lib/profile'
 import { GetStaticProps } from 'next'
 
 export const getStaticProps: GetStaticProps = async () => {
-  const allPostsData = getSortedPostsData()
+  const allPostsData = await getSortedPostsData()
+  const profileData = await getProfile()
   return {
     props: {
       allPostsData,
+      profileData,
     },
   }
 }
@@ -21,19 +24,20 @@ type Props = {
     title: string
     date: string
   }[]
+  profileData: {
+    contentHtml: string
+  }
 }
 
-export default function Home({ allPostsData }: Props) {
+export default function Home({ allPostsData, profileData }: Props) {
   return (
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
-        <p>
-          こんにちは！かたよりです。趣味は植物を育てることです。
-          <a href="https://github.com/yoritin">GitHub</a>
-        </p>
+      <section>
+        <h2 className={utilStyles.headingLg}>Profile</h2>
+        <div dangerouslySetInnerHTML={{ __html: profileData.contentHtml }} />
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
