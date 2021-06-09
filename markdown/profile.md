@@ -29,3 +29,4 @@ React.js / Next.js / Go / Firebase
 - [Twitter](https://twitter.com/yoriblog)
 - [instagram](https://www.instagram.com/tillandsia_yori/?hl=ja)
 - [Youtube](https://www.youtube.com/channel/UCHZAZBI4LttDtULLNzaspsg)
+- [LAPRAS](https://lapras.com/public/UQKUWGE)
