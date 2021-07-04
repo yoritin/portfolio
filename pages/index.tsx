@@ -55,6 +55,9 @@ export default function Home({ allPostsData, profileData }: Props) {
           ))}
         </ul>
       </section>
+      <section>
+        <a href="https://forms.gle/vnQKqjfDH5FExHP17">お問い合わせ</a>
+      </section>
     </Layout>
   )
 }
