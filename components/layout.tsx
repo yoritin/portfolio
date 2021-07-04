@@ -14,7 +14,7 @@ type Props = {
 
 export default function Layout({ children, home }: Props) {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Yori Portfolio" />
@@ -40,14 +40,16 @@ export default function Layout({ children, home }: Props) {
           <li>Contact</li>
         </ul>
       </header>
-      <main className={styles.mainContainer}>{children}</main>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
-        </div>
-      )}
-    </div>
+      <div className={styles.container}>
+        <main>{children}</main>
+        {!home && (
+          <div className={styles.backToHome}>
+            <Link href="/">
+              <a>← Back to home</a>
+            </Link>
+          </div>
+        )}
+      </div>
+    </>
   )
 }
