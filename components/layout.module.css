@@ -1,4 +1,10 @@
-.container {
+.headerContainer {
+  /* max-width: 36rem; */
+  padding: 0 1rem;
+  margin: 3rem auto 6rem;
+}
+
+.mainContainer {
   max-width: 36rem;
   padding: 0 1rem;
   margin: 3rem auto 6rem;
@@ -6,8 +12,22 @@
 
 .header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  /* flex-direction: column; */
   align-items: center;
+}
+
+.headerTitle {
+  padding: 1rem;
+}
+
+.headerList {
+  display: flex;
+}
+
+.headerList li {
+  list-style: none;
+  padding: 1rem;
 }
 
 .backToHome {
