@@ -12,10 +12,6 @@ date: '2020-01-01'
 自社開発スタートアップ → フリーランスエンジニア
 バックエンド、フロントエンド、インフラなどの幅広い技術を経験しています。
 
-趣味で個人開発をしています。
-
-最近は、Flutter でのアプリ開発や Figma で UI/UX デザインとかもやったりしています。
-
 趣味で植物の栽培も行っており、[メキシコの自生地探索](https://www.youtube.com/watch?v=T0zdi9Vd8pc&list=PLuB61pJXzo2Jz3VdUO_R_v-eU6JoV5Rjf)や植物の情報を発信する [Youtube チャンネル](https://www.youtube.com/channel/UCHZAZBI4LttDtULLNzaspsg)も運営しています！
 
 このポートフォリオは Next.js で開発しました！[GitHub repository](https://github.com/yoritin/nextjs-blog)
