@@ -18,11 +18,11 @@ date: '2020-01-01'
 
 ## 🔨 プログラミング言語
 
-JavaScript / TypeScript / PHP / Dart
+JavaScript / TypeScript
 
 ## フレームワーク
 
-Vue.js / Nuxt.js / React.js / Next.js / Flutter / Laravel
+Vue.js / Nuxt.js / React.js / Next.js
 
 ## クラウドインフラ
 
@@ -32,7 +32,7 @@ Vercel
 
 ## SaaS
 
-GitHub (GitHub Actions) / Notion / Jira / Asana / Trello / Slack
+GitHub (GitHub Actions) / GitLab / Notion / Jira / Asana / Trello / Slack
 
 - [GitHub](https://github.com/yoritin)
 - [Twitter](https://twitter.com/yoriblog)
