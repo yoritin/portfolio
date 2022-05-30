@@ -6,7 +6,7 @@ import html from 'remark-html'
 
 const postsDirectory = path.join(process.cwd(), 'markdown/posts')
 
-export function getSortedPostsData() {
+export const getSortedPostsData = () => {
   const fileNames = fs.readdirSync(postsDirectory)
   const allPostsData = fileNames.map((fileName) => {
     const id = fileName.replace(/\.md$/, '')
@@ -30,7 +30,7 @@ export function getSortedPostsData() {
   })
 }
 
-export function getAllPostIds() {
+export const getAllPostIds = () => {
   const fileNames = fs.readdirSync(postsDirectory)
 
   return fileNames.map((fileName) => {
@@ -42,7 +42,7 @@ export function getAllPostIds() {
   })
 }
 
-export async function getPostData(id) {
+export const getPostData = async (id) => {
   const fullPath = path.join(postsDirectory, `${id}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 
