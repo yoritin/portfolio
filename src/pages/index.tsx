@@ -6,6 +6,7 @@ import utilStyles from '@/styles/utils.module.css'
 import { getSortedPostsData } from '@/lib/posts'
 import { getProfile } from '@/lib/profile'
 import { GetStaticProps } from 'next'
+import { VFC } from 'react'
 
 export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = await getSortedPostsData()
@@ -29,7 +30,7 @@ type Props = {
   }
 }
 
-export default function Home({ allPostsData, profileData }: Props) {
+const Home: VFC<Props> = ({ allPostsData, profileData }) => {
   return (
     <Layout home>
       <Head>
@@ -61,3 +62,5 @@ export default function Home({ allPostsData, profileData }: Props) {
     </Layout>
   )
 }
+
+export default Home
