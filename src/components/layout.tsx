@@ -3,16 +3,17 @@ import Image from 'next/image'
 import styles from './layout.module.css'
 import utilStyles from '@/styles/utils.module.css'
 import Link from 'next/link'
+import { ReactNode, VFC } from 'react'
 
 const name = 'Makoto Katayori'
 export const siteTitle = 'Yori Portfolio'
 
 type Props = {
-  children: React.ReactNode
+  children: ReactNode
   home?: boolean
 }
 
-export default function Layout({ children, home }: Props) {
+const Layout: VFC<Props> = ({ children, home }) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -71,3 +72,5 @@ export default function Layout({ children, home }: Props) {
     </div>
   )
 }
+
+export default Layout
