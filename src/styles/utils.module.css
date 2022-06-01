@@ -29,6 +29,20 @@
   border-radius: 9999px;
 }
 
+.spin {
+  animation: icon-spin infinite 20s linear;
+  pointer-events: none;
+}
+
+@keyframes icon-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .colorInherit {
   color: inherit;
 }

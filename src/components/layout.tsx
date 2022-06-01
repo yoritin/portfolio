@@ -32,7 +32,7 @@ const Layout: VFC<Props> = ({ children, home }) => {
             <Image
               priority
               src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
+              className={`${utilStyles.borderCircle} ${utilStyles.spin}`}
               height={144}
               width={144}
               alt={name}
