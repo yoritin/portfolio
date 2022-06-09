@@ -1,10 +1,11 @@
+import { GetStaticPaths,GetStaticProps } from 'next'
+import Head from 'next/head'
+import { VFC } from 'react'
+
+import Date from '@/components/date'
 import Layout from '@/components/layout'
 import { getAllPostIds, getPostData } from '@/lib/posts'
-import Head from 'next/head'
-import Date from '@/components/date'
 import utilStyles from '@/styles/utils.module.css'
-import { GetStaticProps, GetStaticPaths } from 'next'
-import { VFC } from 'react'
 
 type Props = {
   postData: {

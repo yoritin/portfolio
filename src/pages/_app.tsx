@@ -1,7 +1,9 @@
 import '@/styles/global.css'
+
 import { AppProps } from 'next/app'
-import { useEffect } from 'react'
 import { useRouter } from 'next/router'
+import { useEffect } from 'react'
+
 import * as gtag from '@/lib/gtag'
 
 const App = ({ Component, pageProps }: AppProps) => {
