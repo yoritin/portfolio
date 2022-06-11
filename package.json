@@ -10,12 +10,6 @@
     "lint-staged": "lint-staged",
     "prepare": "husky install"
   },
-  "lint-staged": {
-    "*.{js,ts,jsx,tsx}": [
-      "eslint --fix",
-      "prettier --write"
-    ]
-  },
   "dependencies": {
     "date-fns": "2.28.0",
     "gray-matter": "4.0.3",
