@@ -1,7 +1,6 @@
-import { GetStaticProps } from 'next'
+import { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
-import { VFC } from 'react'
 
 import Date from '@/components/date'
 import Layout, { siteTitle } from '@/components/layout'
@@ -31,7 +30,7 @@ type Props = {
   }
 }
 
-const Home: VFC<Props> = ({ allPostsData, profileData }) => {
+const Home: NextPage<Props> = ({ allPostsData, profileData }) => {
   return (
     <Layout home>
       <Head>
