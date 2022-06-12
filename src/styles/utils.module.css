@@ -64,3 +64,19 @@
 .lightText {
   color: #666;
 }
+
+.gradation {
+  display: inline-block;
+  background: linear-gradient(45deg, #FA8BFF 16%, #2BD2FF 57%, #2BFF88 90%);
+  background: -webkit-linear-gradient(45deg, #FA8BFF 16%, #2BD2FF 57%, #2BFF88 90%);
+  background-clip: inherit;
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientEffect 2.5s infinite alternate;
+}
+
+@keyframes gradientEffect {
+  from {background-position: left}
+  to {background-position: right}
+}
