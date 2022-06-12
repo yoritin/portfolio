@@ -39,7 +39,9 @@ const Layout: VFC<Props> = ({ children, home }) => {
               width={144}
               alt={name}
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <h1 className={`${utilStyles.heading2Xl} ${utilStyles.gradation}`}>
+              {name}
+            </h1>
           </>
         ) : (
           <>
