@@ -27,8 +27,7 @@ Vue.js / Nuxt.js / React.js / Next.js
 ## クラウドインフラ
 
 AWS (VPC / EC2 / RDS / Route53 / S3 / Lambda / CodePipeline / CodeBuild / CodeDeploy)
-Firebase Hosting / FireStore / CloudFunctions
-Vercel
+Firebase Hosting / FireStore / CloudFunctions / Vercel
 
 ## SaaS
 
