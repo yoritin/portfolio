@@ -16,6 +16,10 @@ date: '2020-01-01'
 
 このポートフォリオは Next.js で開発しました！[GitHub repository](https://github.com/yoritin/nextjs-blog)
 
+🌱植物の成長記録管理サービス [Plants Log](https://plantslog.com/) 開発中 β版公開中！
+
+スキルシート閲覧希望の方は[お問い合わせフォーム](https://forms.gle/vnQKqjfDH5FExHP17)までご連絡ください。
+
 ## 🔨 プログラミング言語
 
 JavaScript / TypeScript
