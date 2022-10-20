@@ -7,25 +7,23 @@ import utilStyles from '@/styles/utils.module.css'
 
 import styles from './layout.module.css'
 
-const name = 'Makoto Katayori'
-export const siteTitle = 'Yori Portfolio'
-
 type Props = {
   children: ReactNode
   home?: boolean
 }
+export const name = 'Makoto Katayori'
 
 const Layout: VFC<Props> = ({ children, home }) => {
   return (
     <div className={styles.container}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content="Yori Portfolio" />
+        <meta name="description" content={name} />
         <meta
           property="og:image"
           content="https://nextjs-blog-yoritin.vercel.app/twitter-card.jpg"
         />
-        <meta name="og:title" content={siteTitle} />
+        <meta name="og:title" content={name} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header className={styles.header}>

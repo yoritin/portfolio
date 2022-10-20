@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 
 import Date from '@/components/date'
-import Layout, { siteTitle } from '@/components/layout'
+import Layout, { name } from '@/components/layout'
 import { getSortedPostsData } from '@/lib/posts'
 import { getProfile } from '@/lib/profile'
 import utilStyles from '@/styles/utils.module.css'
@@ -34,7 +34,7 @@ const Home: NextPage<Props> = ({ allPostsData, profileData }) => {
   return (
     <Layout home>
       <Head>
-        <title>{siteTitle}</title>
+        <title>{name}</title>
       </Head>
       <section>
         <h2 className={utilStyles.headingLg}>Profile</h2>
