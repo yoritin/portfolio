@@ -1,4 +1,4 @@
-import { format,parseISO } from 'date-fns'
+import { format, parseISO } from 'date-fns'
 import { VFC } from 'react'
 
 type Props = {
@@ -7,7 +7,7 @@ type Props = {
 
 const Date: VFC<Props> = ({ dateString }) => {
   const date = parseISO(dateString)
-  return <time dateTime={dateString}>{format(date, 'LLLL d, yyyy')}</time>
+  return <time dateTime={dateString}>{format(date, 'yyyy / M / d')}</time>
 }
 
 export default Date
