@@ -75,6 +75,9 @@ const Layout: VFC<Props> = ({ children, home }) => {
           </Link>
         </div>
       )}
+      <footer style={{ textAlign: 'center' }}>
+        <p>© 2023 My Website</p>
+      </footer>
     </div>
   )
 }
