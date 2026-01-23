@@ -1,0 +1,241 @@
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--spacing-3xl) var(--spacing-lg);
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.01em;
+  margin-bottom: var(--spacing-3xl);
+}
+
+.section {
+  margin-bottom: var(--spacing-3xl);
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.01em;
+  margin-bottom: var(--spacing-lg);
+}
+
+.profileText {
+  line-height: 1.6;
+  color: var(--text-primary);
+  font-size: var(--font-size-base);
+}
+
+.profileText p {
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.6;
+}
+
+/* Timeline Container */
+.timeline {
+  position: relative;
+  padding-left: var(--spacing-xl);
+}
+
+/* Timeline Vertical Line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px; /* ドットの中心 (16px / 2 - 3px線幅 / 2 = 6.5px ≈ 7px) */
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--gradient-primary);
+  border-radius: var(--radius-full);
+}
+
+/* Timeline Item */
+.timelineItem {
+  position: relative;
+  padding-bottom: var(--spacing-3xl);
+}
+
+.timelineItem:last-child {
+  padding-bottom: 0;
+}
+
+/* Timeline Dot */
+.timelineDot {
+  position: absolute;
+  left: calc(-1 * var(--spacing-xl));
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  background: var(--gradient-primary);
+  border: 3px solid var(--color-bg);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px var(--border-color);
+  z-index: 1;
+}
+
+/* Career Card */
+.careerCard {
+  padding: var(--spacing-lg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background-color: var(--card-bg);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.careerCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+}
+
+/* Header Section */
+.careerHeader {
+  margin-bottom: var(--spacing-md);
+}
+
+.periodInfo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+  color: var(--text-secondary);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Project Section */
+.projectInfo {
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.projectTitle {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.3;
+  margin-bottom: var(--spacing-xs);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.roleText {
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+/* Description */
+.description {
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-lg);
+  color: var(--text-primary);
+}
+
+/* Info Section */
+.infoSection {
+  margin-bottom: var(--spacing-md);
+}
+
+.infoSection:last-child {
+  margin-bottom: 0;
+}
+
+.infoTitle {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.5;
+  margin-bottom: var(--spacing-xs);
+  color: var(--text-primary);
+}
+
+/* Tags */
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tag {
+  padding: 0.25rem 0.75rem;
+  font-size: var(--font-size-xs);
+  line-height: 1.5;
+  border-radius: var(--radius-sm);
+  transition: transform 0.2s ease;
+}
+
+.tag:hover {
+  transform: scale(1.05);
+}
+
+.responsibilityTag {
+  background-color: var(--section-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.techTag {
+  background: var(--gradient-primary);
+  color: white;
+}
+
+/* Dark mode adjustments */
+:root[data-theme='dark'] .careerCard {
+  background-color: rgba(31, 41, 55, 0.5);
+  border-color: rgba(75, 85, 99, 0.3);
+}
+
+:root[data-theme='dark'] .careerCard:hover {
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+:root[data-theme='dark'] .responsibilityTag {
+  background-color: rgba(31, 41, 55, 0.8);
+  border-color: rgba(75, 85, 99, 0.5);
+}
+
+:root[data-theme='dark'] .projectInfo {
+  border-bottom-color: rgba(75, 85, 99, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.75rem;
+  }
+
+  .timeline {
+    padding-left: var(--spacing-lg);
+  }
+
+  .timelineDot {
+    left: calc(-1 * var(--spacing-lg));
+  }
+
+  .careerCard {
+    padding: var(--spacing-md);
+  }
+
+  .projectTitle {
+    font-size: 1.25rem;
+  }
+
+  .periodInfo {
+    font-size: 0.85rem;
+  }
+}

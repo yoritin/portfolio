@@ -1,0 +1,283 @@
+/* Liquid Glass Floating Menu */
+.container {
+  position: fixed;
+  bottom: var(--spacing-lg);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  animation: slideUp 0.5s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Expanded Menu */
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-lg);
+
+  /* Glassmorphism Effect */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 8px 32px 0 rgba(102, 126, 234, 0.15),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.3);
+
+  animation: expandMenu 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes expandMenu {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Navigation List */
+.navList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Navigation Item */
+.navItem {
+  display: block;
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  color: var(--text-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+  transition: all 0.15s ease;
+  background: transparent;
+  text-align: center;
+}
+
+.navItem:hover {
+  background: rgba(102, 126, 234, 0.08);
+  color: var(--gradient-primary);
+}
+
+.navItem.active {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+  position: relative;
+}
+
+.navItem.active::before {
+  content: '';
+  position: absolute;
+  left: var(--spacing-xs);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 60%;
+  background: var(--gradient-primary);
+  border-radius: 2px;
+}
+
+/* Theme Button in Menu */
+.themeButton {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: 10px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  transition: all 0.15s ease;
+  background: transparent;
+  width: 100%;
+  margin-top: var(--spacing-xs);
+  text-align: center;
+  justify-content: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  min-height: 40px;
+}
+
+.themeButton:hover {
+  background: rgba(102, 126, 234, 0.08);
+  color: var(--color-primary);
+}
+
+.themeButton .icon {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.themeButton .label {
+  font-size: 0.7rem;
+}
+
+/* Toggle Button */
+.button {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Glassmorphism Effect */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 8px 32px 0 rgba(102, 126, 234, 0.15),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.3);
+
+  /* Minimum tap target size */
+  min-height: 40px;
+  min-width: 90px;
+}
+
+.button:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow:
+    0 12px 40px 0 rgba(102, 126, 234, 0.25),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+}
+
+.label {
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+
+/* Dark Mode Adjustments */
+:root[data-theme='dark'] .button {
+  background: rgba(31, 41, 55, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 8px 32px 0 rgba(102, 126, 234, 0.2),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+:root[data-theme='dark'] .button:hover {
+  background: rgba(31, 41, 55, 0.4);
+  box-shadow:
+    0 12px 40px 0 rgba(102, 126, 234, 0.3),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+:root[data-theme='dark'] .menu {
+  background: rgba(31, 41, 55, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 8px 32px 0 rgba(102, 126, 234, 0.2),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+:root[data-theme='dark'] .navItem:hover {
+  background: rgba(102, 126, 234, 0.1);
+}
+
+:root[data-theme='dark'] .themeButton:hover {
+  background: rgba(102, 126, 234, 0.1);
+  color: var(--color-primary);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .button {
+    background: rgba(31, 41, 55, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow:
+      0 8px 32px 0 rgba(102, 126, 234, 0.2),
+      inset 0 1px 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  :root:not([data-theme]) .button:hover {
+    background: rgba(31, 41, 55, 0.4);
+    box-shadow:
+      0 12px 40px 0 rgba(102, 126, 234, 0.3),
+      inset 0 1px 1px 0 rgba(255, 255, 255, 0.15);
+  }
+
+  :root:not([data-theme]) .menu {
+    background: rgba(31, 41, 55, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  :root:not([data-theme]) .navItem:hover {
+    background: rgba(102, 126, 234, 0.1);
+  }
+
+  :root:not([data-theme]) .themeButton:hover {
+    background: rgba(102, 126, 234, 0.1);
+    color: var(--color-primary);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    bottom: var(--spacing-md);
+  }
+
+  .button {
+    padding: var(--spacing-xs) var(--spacing-md);
+    min-width: 100px;
+  }
+
+  .label {
+    font-size: 0.75rem;
+  }
+}
+
+/* Add glow effect on focus for accessibility */
+.button:focus-visible,
+.navItem:focus-visible,
+.themeButton:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 3px rgba(102, 126, 234, 0.3),
+    0 12px 40px 0 rgba(102, 126, 234, 0.25);
+}

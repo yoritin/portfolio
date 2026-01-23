@@ -1,17 +1,41 @@
 .heading2Xl {
   font-size: 2.5rem;
   line-height: 1.2;
-  font-weight: 800;
-  letter-spacing: -0.05rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.015em;
   margin: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  .heading2Xl {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading2Xl {
+    font-size: 1.75rem;
+  }
 }
 
 .headingXl {
   font-size: 2rem;
   line-height: 1.3;
-  font-weight: 800;
-  letter-spacing: -0.05rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.015em;
   margin: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  .headingXl {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .headingXl {
+    font-size: 1.5rem;
+  }
 }
 
 .headingLg {
@@ -20,9 +44,21 @@
   margin: 1rem 0;
 }
 
+@media (max-width: 480px) {
+  .headingLg {
+    font-size: 1.25rem;
+  }
+}
+
 .headingMd {
   font-size: 1.2rem;
   line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+  .headingMd {
+    font-size: 1.1rem;
+  }
 }
 
 .borderCircle {
@@ -62,13 +98,13 @@
 }
 
 .lightText {
-  color: #666;
+  color: var(--color-text-light);
 }
 
 .gradation {
   display: inline-block;
-  background: linear-gradient(45deg, #FA8BFF 16%, #2BD2FF 57%, #2BFF88 90%);
-  background: -webkit-linear-gradient(45deg, #FA8BFF 16%, #2BD2FF 57%, #2BFF88 90%);
+  background: linear-gradient(45deg, #fa8bff 16%, #2bd2ff 57%, #2bff88 90%);
+  background: -webkit-linear-gradient(45deg, #fa8bff 16%, #2bd2ff 57%, #2bff88 90%);
   background-clip: inherit;
   background-size: 300% auto;
   -webkit-background-clip: text;
@@ -77,6 +113,10 @@
 }
 
 @keyframes gradientEffect {
-  from {background-position: left}
-  to {background-position: right}
+  from {
+    background-position: left;
+  }
+  to {
+    background-position: right;
+  }
 }
