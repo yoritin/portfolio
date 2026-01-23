@@ -20,7 +20,7 @@
     "remark-html": "13.0.2"
   },
   "devDependencies": {
-    "@types/gtag.js": "^0.0.12",
+    "@types/gtag.js": "^0.0.20",
     "@types/node": "18.15.0",
     "@types/react": "18.0.28",
     "eslint": "8.36.0",
