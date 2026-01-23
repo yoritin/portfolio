@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ReactNode, VFC } from 'react'
+import { FC, ReactNode } from 'react'
 
 import utilStyles from '@/styles/utils.module.css'
 
@@ -13,7 +13,7 @@ type Props = {
 }
 export const name = 'Makoto Katayori'
 
-const Layout: VFC<Props> = ({ children, home }) => {
+const Layout: FC<Props> = ({ children, home }) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -21,7 +21,7 @@ const Layout: VFC<Props> = ({ children, home }) => {
         <meta name="description" content={name} />
         <meta
           property="og:image"
-          content="https://nextjs-blog-yoritin.vercel.app/twitter-card.jpg"
+          content="https://portfolio.plantslog.com/twitter-card.jpg"
         />
         <meta name="og:title" content={name} />
         <meta name="twitter:card" content="summary_large_image" />
@@ -44,24 +44,21 @@ const Layout: VFC<Props> = ({ children, home }) => {
         ) : (
           <>
             <Link href="/">
-              <a>
-                <Image
-                  priority
-                  src="/images/profile.jpg"
-                  className={utilStyles.borderCircle}
-                  height={108}
-                  width={108}
-                  alt={name}
-                />
-              </a>
+              <Image
+                priority
+                src="/images/profile.jpg"
+                className={utilStyles.borderCircle}
+                height={108}
+                width={108}
+                alt={name}
+              />
             </Link>
             <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a
-                  className={`${utilStyles.colorInherit} ${utilStyles.gradation}`}
-                >
-                  {name}
-                </a>
+              <Link
+                href="/"
+                className={`${utilStyles.colorInherit} ${utilStyles.gradation}`}
+              >
+                {name}
               </Link>
             </h2>
           </>
@@ -70,13 +67,11 @@ const Layout: VFC<Props> = ({ children, home }) => {
       <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
+          <Link href="/">← Back to home</Link>
         </div>
       )}
       <footer style={{ textAlign: 'center' }}>
-        <p>© 2023 My Website</p>
+        <p>© 2026 {name}</p>
       </footer>
     </div>
   )
