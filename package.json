@@ -14,15 +14,15 @@
     "date-fns": "2.29.3",
     "gray-matter": "4.0.3",
     "next": "13.2.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
     "remark": "13.0.0",
     "remark-html": "13.0.2"
   },
   "devDependencies": {
     "@types/gtag.js": "^0.0.12",
     "@types/node": "18.15.0",
-    "@types/react": "18.0.28",
+    "@types/react": "19.2.9",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
     "eslint-config-prettier": "^8.5.0",
