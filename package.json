@@ -13,7 +13,7 @@
   "dependencies": {
     "date-fns": "4.1.0",
     "gray-matter": "4.0.3",
-    "next": "16.1.4",
+    "next": "16.1.5",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "remark": "13.0.0",
@@ -27,7 +27,7 @@
     "@types/node": "25.0.10",
     "@types/react": "19.2.9",
     "eslint": "9.39.2",
-    "eslint-config-next": "16.1.4",
+    "eslint-config-next": "16.1.5",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "husky": "^9.1.7",
