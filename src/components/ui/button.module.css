@@ -29,32 +29,32 @@
 
 /* Variants */
 .primary {
-  background: var(--gradient-primary);
-  color: white;
+  background-color: var(--color-text);
+  color: var(--color-bg);
 }
 
 .primary:hover {
-  background: var(--gradient-primary-hover);
+  background-color: var(--color-secondary);
 }
 
 .secondary {
-  background-color: var(--color-secondary);
-  color: white;
+  background-color: var(--color-text-light);
+  color: var(--color-bg);
 }
 
 .secondary:hover {
-  background-color: var(--color-secondary-dark);
+  background-color: var(--color-text);
 }
 
 .outline {
   background-color: transparent;
-  color: var(--color-primary);
-  border-color: var(--color-primary);
+  color: var(--color-text);
+  border-color: var(--color-border);
 }
 
 .outline:hover {
-  background-color: var(--color-primary);
-  color: white;
+  background-color: var(--color-text);
+  color: var(--color-bg);
 }
 
 /* Sizes */

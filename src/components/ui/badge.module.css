@@ -17,30 +17,30 @@
   font-size: 0.875rem;
 }
 
-/* Variants */
+/* Variants - All monotone */
 .default {
   background-color: var(--badge-bg, #e5e7eb);
   color: var(--badge-text, #374151);
 }
 
 .primary {
-  background-color: #dbeafe;
-  color: #1e40af;
+  background-color: #e5e7eb;
+  color: #1f2937;
 }
 
 .success {
-  background-color: #d1fae5;
-  color: #065f46;
+  background-color: #d1d5db;
+  color: #111827;
 }
 
 .warning {
-  background-color: #fef3c7;
-  color: #92400e;
+  background-color: #f3f4f6;
+  color: #374151;
 }
 
 .info {
-  background-color: #e0e7ff;
-  color: #3730a3;
+  background-color: #d1d5db;
+  color: #1f2937;
 }
 
 [data-theme='dark'] .default {
@@ -49,21 +49,21 @@
 }
 
 [data-theme='dark'] .primary {
-  background-color: #1e3a8a;
-  color: #bfdbfe;
+  background-color: #374151;
+  color: #e5e7eb;
 }
 
 [data-theme='dark'] .success {
-  background-color: #064e3b;
-  color: #a7f3d0;
+  background-color: #4b5563;
+  color: #f3f4f6;
 }
 
 [data-theme='dark'] .warning {
-  background-color: #78350f;
-  color: #fde68a;
+  background-color: #374151;
+  color: #d1d5db;
 }
 
 [data-theme='dark'] .info {
-  background-color: #312e81;
-  color: #c7d2fe;
+  background-color: #4b5563;
+  color: #e5e7eb;
 }

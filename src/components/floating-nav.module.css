@@ -1,4 +1,4 @@
-/* Liquid Glass Floating Menu */
+/* Floating Menu */
 .container {
   position: fixed;
   bottom: var(--spacing-lg);
@@ -37,7 +37,7 @@
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow:
-    0 8px 32px 0 rgba(102, 126, 234, 0.15),
+    0 8px 32px 0 rgba(0, 0, 0, 0.1),
     inset 0 1px 1px 0 rgba(255, 255, 255, 0.3);
 
   animation: expandMenu 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -76,12 +76,11 @@
 }
 
 .navItem:hover {
-  background: rgba(102, 126, 234, 0.08);
-  color: var(--gradient-primary);
+  background: rgba(0, 0, 0, 0.05);
 }
 
 .navItem.active {
-  color: var(--color-primary);
+  color: var(--text-primary);
   font-weight: var(--font-weight-semibold);
   position: relative;
 }
@@ -94,7 +93,7 @@
   transform: translateY(-50%);
   width: 3px;
   height: 60%;
-  background: var(--gradient-primary);
+  background: var(--text-primary);
   border-radius: 2px;
 }
 
@@ -122,8 +121,7 @@
 }
 
 .themeButton:hover {
-  background: rgba(102, 126, 234, 0.08);
-  color: var(--color-primary);
+  background: rgba(0, 0, 0, 0.05);
 }
 
 .themeButton .icon {
@@ -158,7 +156,7 @@
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow:
-    0 8px 32px 0 rgba(102, 126, 234, 0.15),
+    0 8px 32px 0 rgba(0, 0, 0, 0.1),
     inset 0 1px 1px 0 rgba(255, 255, 255, 0.3);
 
   /* Minimum tap target size */
@@ -169,7 +167,7 @@
 .button:hover {
   transform: translateY(-2px) scale(1.02);
   box-shadow:
-    0 12px 40px 0 rgba(102, 126, 234, 0.25),
+    0 12px 40px 0 rgba(0, 0, 0, 0.15),
     inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
   background: rgba(255, 255, 255, 0.15);
 }
@@ -197,14 +195,14 @@
   background: rgba(31, 41, 55, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow:
-    0 8px 32px 0 rgba(102, 126, 234, 0.2),
+    0 8px 32px 0 rgba(0, 0, 0, 0.2),
     inset 0 1px 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 :root[data-theme='dark'] .button:hover {
   background: rgba(31, 41, 55, 0.4);
   box-shadow:
-    0 12px 40px 0 rgba(102, 126, 234, 0.3),
+    0 12px 40px 0 rgba(0, 0, 0, 0.3),
     inset 0 1px 1px 0 rgba(255, 255, 255, 0.15);
 }
 
@@ -212,17 +210,16 @@
   background: rgba(31, 41, 55, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow:
-    0 8px 32px 0 rgba(102, 126, 234, 0.2),
+    0 8px 32px 0 rgba(0, 0, 0, 0.2),
     inset 0 1px 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 :root[data-theme='dark'] .navItem:hover {
-  background: rgba(102, 126, 234, 0.1);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 :root[data-theme='dark'] .themeButton:hover {
-  background: rgba(102, 126, 234, 0.1);
-  color: var(--color-primary);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -230,14 +227,14 @@
     background: rgba(31, 41, 55, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow:
-      0 8px 32px 0 rgba(102, 126, 234, 0.2),
+      0 8px 32px 0 rgba(0, 0, 0, 0.2),
       inset 0 1px 1px 0 rgba(255, 255, 255, 0.1);
   }
 
   :root:not([data-theme]) .button:hover {
     background: rgba(31, 41, 55, 0.4);
     box-shadow:
-      0 12px 40px 0 rgba(102, 126, 234, 0.3),
+      0 12px 40px 0 rgba(0, 0, 0, 0.3),
       inset 0 1px 1px 0 rgba(255, 255, 255, 0.15);
   }
 
@@ -247,12 +244,11 @@
   }
 
   :root:not([data-theme]) .navItem:hover {
-    background: rgba(102, 126, 234, 0.1);
+    background: rgba(255, 255, 255, 0.05);
   }
 
   :root:not([data-theme]) .themeButton:hover {
-    background: rgba(102, 126, 234, 0.1);
-    color: var(--color-primary);
+    background: rgba(255, 255, 255, 0.05);
   }
 }
 
@@ -278,6 +274,24 @@
 .themeButton:focus-visible {
   outline: none;
   box-shadow:
-    0 0 0 3px rgba(102, 126, 234, 0.3),
-    0 12px 40px 0 rgba(102, 126, 234, 0.25);
+    0 0 0 3px rgba(0, 0, 0, 0.5),
+    0 12px 40px 0 rgba(0, 0, 0, 0.1);
+}
+
+:root[data-theme='dark'] .button:focus-visible,
+:root[data-theme='dark'] .navItem:focus-visible,
+:root[data-theme='dark'] .themeButton:focus-visible {
+  box-shadow:
+    0 0 0 3px rgba(255, 255, 255, 0.6),
+    0 12px 40px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .button:focus-visible,
+  :root:not([data-theme]) .navItem:focus-visible,
+  :root:not([data-theme]) .themeButton:focus-visible {
+    box-shadow:
+      0 0 0 3px rgba(255, 255, 255, 0.6),
+      0 12px 40px 0 rgba(0, 0, 0, 0.2);
+  }
 }
