@@ -103,20 +103,5 @@
 
 .gradation {
   display: inline-block;
-  background: linear-gradient(45deg, #fa8bff 16%, #2bd2ff 57%, #2bff88 90%);
-  background: -webkit-linear-gradient(45deg, #fa8bff 16%, #2bd2ff 57%, #2bff88 90%);
-  background-clip: inherit;
-  background-size: 300% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradientEffect 2.5s infinite alternate;
-}
-
-@keyframes gradientEffect {
-  from {
-    background-position: left;
-  }
-  to {
-    background-position: right;
-  }
+  color: var(--text-primary);
 }

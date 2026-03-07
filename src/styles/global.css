@@ -3,21 +3,17 @@
   /* Colors */
   --color-bg: #ffffff;
   --color-text: #1f2937;
-  --color-text-light: #4b5563;
-  --color-border: #d1d5db;
-  --color-primary: #667eea;
-  --color-secondary: #764ba2;
-  --color-secondary-dark: #5e3c82;
+  --color-text-light: #6b7280;
+  --color-border: #e5e7eb;
+  --color-primary: #1f2937;
+  --color-secondary: #374151;
+  --color-secondary-dark: #111827;
   --text-primary: #1f2937;
-  --text-secondary: #4b5563;
+  --text-secondary: #6b7280;
   --card-bg: #ffffff;
   --section-bg: #f9fafb;
   --nav-bg: rgba(255, 255, 255, 0.9);
-  --border-color: #d1d5db;
-
-  /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --gradient-primary-hover: linear-gradient(135deg, #5568d3 0%, #64408a 100%);
+  --border-color: #e5e7eb;
 
   /* 8pt Grid Spacing System */
   --spacing-xs: 8px;
@@ -53,12 +49,13 @@
 :root[data-theme='dark'] {
   --color-bg: #111827;
   --color-text: #f9fafb;
-  --color-text-light: #d1d5db;
+  --color-text-light: #9ca3af;
   --color-border: #374151;
-  --color-link: #60a5fa;
-  --color-link-hover: #3b82f6;
+  --color-primary: #e5e7eb;
+  --color-secondary: #d1d5db;
+  --color-secondary-dark: #f9fafb;
   --text-primary: #f9fafb;
-  --text-secondary: #d1d5db;
+  --text-secondary: #9ca3af;
   --card-bg: rgba(31, 41, 55, 0.5);
   --section-bg: rgba(31, 41, 55, 0.8);
   --nav-bg: rgba(17, 24, 39, 0.9);
@@ -69,11 +66,13 @@
   :root:not([data-theme]) {
     --color-bg: #111827;
     --color-text: #f9fafb;
-    --color-text-light: #d1d5db;
+    --color-text-light: #9ca3af;
     --color-border: #374151;
-
+    --color-primary: #e5e7eb;
+    --color-secondary: #d1d5db;
+    --color-secondary-dark: #f9fafb;
     --text-primary: #f9fafb;
-    --text-secondary: #d1d5db;
+    --text-secondary: #9ca3af;
     --card-bg: rgba(31, 41, 55, 0.5);
     --section-bg: rgba(31, 41, 55, 0.8);
     --nav-bg: rgba(17, 24, 39, 0.9);
@@ -199,7 +198,7 @@ footer a:not([class*='button']):not([class*='Link']):not([class*='link'])::after
 
 main a:not([class*='button']):not([class*='navLink']):not([class*='Link']):not([class*='link']):hover,
 footer a:not([class*='button']):not([class*='Link']):not([class*='link']):hover {
-  color: var(--color-secondary);
+  color: var(--text-primary);
 }
 
 main a:not([class*='button']):not([class*='navLink']):not([class*='Link']):not([class*='link']):hover::after,
